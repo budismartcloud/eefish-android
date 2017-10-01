@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EEFISH</string>
+    <string name="title_activity_regsiter_acitivity">RegsiterAcitivity</string>
 </resources>
