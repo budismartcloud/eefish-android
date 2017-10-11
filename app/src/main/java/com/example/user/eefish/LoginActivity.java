@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.user.eefish.Controller.AppConfig;
 import com.example.user.eefish.Controller.AppController;
+import com.example.user.eefish.Model.User;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,22 +25,23 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
+    EditText edtTextLoginUsername,edtTextLoginPassword;
+    Button btnLogin,btnRegisterLink;
+    String username,password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
 
 
-        final EditText edtTextLoginUsername = (EditText) findViewById(R.id.edtText_Login_Username);
-        final EditText edtTextLoginPassword = (EditText) findViewById(R.id.edtText_Login_password);
-        Button btnLogin = (Button) findViewById(R.id.btn_Login_action);
-
-        Button btnRegisterLink = (Button) findViewById(R.id.btn_Login_RegisterLink);
+        GetAllEditTextFromLayout();
+        GetAllButtonFromLayout();
 
         btnRegisterLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent register = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent register = new Intent(LoginActivity.this, RegisterActivityStep1.class);
                 startActivity(register);
             }
         });
@@ -47,8 +49,10 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username = edtTextLoginUsername.getText().toString();
-                String password = edtTextLoginPassword.getText().toString();
+
+                GetAllEditTextFromLayout();
+                SetStringUsernameValueDariEditTextUsername();
+                SetPasswordValueDariEditTextPassword();
 
                 if (username.isEmpty() && password.isEmpty()){
                     Toast.makeText(LoginActivity.this, "Field username dan Password Harus di Isi", Toast.LENGTH_SHORT).show();
@@ -58,6 +62,24 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void SetPasswordValueDariEditTextPassword() {
+        password = edtTextLoginPassword.getText().toString();
+    }
+
+    private void SetStringUsernameValueDariEditTextUsername() {
+        username = edtTextLoginUsername.getText().toString();
+    }
+
+    private void GetAllButtonFromLayout() {
+        btnLogin = (Button) findViewById(R.id.btn_Login_action);
+        btnRegisterLink = (Button) findViewById(R.id.btn_Login_RegisterLink);
+    }
+
+    private void GetAllEditTextFromLayout() {
+        edtTextLoginUsername = (EditText) findViewById(R.id.edtText_Login_Username);
+        edtTextLoginPassword = (EditText) findViewById(R.id.edtText_Login_password);
     }
 
     private void doLogin(final String username, final String password) {
@@ -75,14 +97,30 @@ public class LoginActivity extends AppCompatActivity {
                             JSONObject obj = new JSONObject(response);
 
                             //if no error in response
-                            if (!obj.getBoolean("error")) {
-//                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
-
+                            if (obj.getInt("code") == 302) {
+                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
                                 //getting the user from the response
-                                JSONObject userJson = obj.getJSONObject("email");
-                                Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_SHORT).show();
+                                JSONObject userJson = obj.getJSONObject("data");
+                                //creating a new user object
+                                User user = new User(
+                                        userJson.getInt("id"),
+                                        userJson.getString("username"),
+                                        userJson.getString("name"),
+                                        userJson.getString("password"),
+                                        userJson.getString("identity_number"),
+                                        userJson.getString("address"),
+                                        userJson.getString("phone_number"),
+                                        userJson.getString("email"),
+                                        userJson.getString("postcode")
+                                );
+
+                                // TODO ambil data ke page selanjutnya
+
+
+
+
                             } else {
-                                Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();

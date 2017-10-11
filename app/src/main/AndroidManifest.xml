@@ -13,20 +13,17 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Controller.AppController" />
         <activity android:name=".Controller.AppConfig" />
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".Controller.SessionManager" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                    <action android:name="android.intent.action.MAIN" />
-                    <category android:name="android.intent.category.LAUNCHER" />
-
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".RegisterActivity2"></activity>
+        <activity android:name=".RegisterActivityStep1" />
+        <activity android:name=".RegisterActivityStep2" />
+        <activity android:name=".DummyProfileActivity"></activity>
     </application>
 
 </manifest>

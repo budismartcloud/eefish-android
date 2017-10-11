@@ -4,51 +4,27 @@ package com.example.user.eefish.Model;
  * Created by Rafif on 03/10/2017.
  */
 public class User {
-    private int id,kodepos;
-    private String email,password,nama,alamat,noktp,username,telepon;
+    int id;
+    String username,name,password,identity_number,address,phone_number,email,postcode;
 
-    public User(int id, int kodepos, String email, String password, String nama, String alamat, String noktp, String username, String telepon) {
+    public User(int id, String username, String name, String password, String identity_number, String address, String phone_number, String email, String postcode) {
         this.id = id;
-        this.kodepos = kodepos;
-        this.email = email;
-        this.password = password;
-        this.nama = nama;
-        this.alamat = alamat;
-        this.noktp = noktp;
         this.username = username;
-        this.telepon = telepon;
+        this.name = name;
+        this.password = password;
+        this.identity_number = identity_number;
+        this.address = address;
+        this.phone_number = phone_number;
+        this.email = email;
+        this.postcode = postcode;
     }
 
-    public int getKodepos() {
-        return kodepos;
+    public int getId() {
+        return id;
     }
 
-    public void setKodepos(int kodepos) {
-        this.kodepos = kodepos;
-    }
-
-    public String getTelepon() {
-        return telepon;
-    }
-
-    public void setTelepon(String telepon) {
-        this.telepon = telepon;
-    }
-
-    public String getAlamat() {
-        return alamat;
-    }
-
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
-    }
-
-    public String getNoktp() {
-        return noktp;
-    }
-
-    public void setNoktp(String noktp) {
-        this.noktp = noktp;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -59,22 +35,12 @@ public class User {
         this.username = username;
     }
 
-    public int getId() {
-        return id;
+    public String getName() {
+        return name;
     }
 
-
-    public void setId(int id) {
-
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -85,11 +51,43 @@ public class User {
         this.password = password;
     }
 
-    public String getNama() {
-        return nama;
+    public String getIdentity_number() {
+        return identity_number;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setIdentity_number(String identity_number) {
+        this.identity_number = identity_number;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone_number() {
+        return phone_number;
+    }
+
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPostcode() {
+        return postcode;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
     }
 }
