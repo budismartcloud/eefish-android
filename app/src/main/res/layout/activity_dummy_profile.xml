@@ -6,14 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.eefish.DummyProfileActivity">
 
-    <!--address-->
-    <!--post_code-->
     <!--picture-->
-    <!--phone_number-->
 
     <!--username-->
     <TextView
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/usernameprofile"
@@ -21,19 +18,56 @@
 
     <!--name-->
     <TextView
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/nameprofile"
+        android:layout_below="@id/usernameprofile"
         />
 
     <!--email-->
     <TextView
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/emailprofile"
+        android:layout_below="@id/nameprofile"
+        />
+    <!--identity_number-->
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/identitynumber"
+        android:layout_below="@+id/emailprofile"
+        />
+    <!--phone_number-->
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phonenumberprofile"
+        android:layout_below="@id/identitynumber"
         />
 
-    <!--identity_number-->
+    <!--address-->
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressprofile"
+        android:layout_below="@id/phonenumberprofile"
+        />
+
+    <!--post_code-->
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/postcodeprofile"
+        android:layout_below="@id/addressprofile"
+        />
+
 
 
 </RelativeLayout>

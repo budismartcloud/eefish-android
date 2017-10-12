@@ -15,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.user.eefish.Controller.AppConfig;
 import com.example.user.eefish.Controller.AppController;
+import com.example.user.eefish.Controller.SessionManager;
 import com.example.user.eefish.Model.User;
 
 import org.json.JSONException;
@@ -28,15 +29,19 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtTextLoginUsername,edtTextLoginPassword;
     Button btnLogin,btnRegisterLink;
     String username,password;
+    Intent afterlogin;
+    SessionManager session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
 
+        Intent afterlogin = new Intent(LoginActivity.this, DummyProfileActivity.class);
 
         GetAllEditTextFromLayout();
         GetAllButtonFromLayout();
+        session = new SessionManager(getApplicationContext());
 
         btnRegisterLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Field username dan Password Harus di Isi", Toast.LENGTH_SHORT).show();
                 }else {
                     doLogin(username, password);
+
                 }
             }
         });
@@ -116,10 +122,20 @@ public class LoginActivity extends AppCompatActivity {
 
                                 // TODO ambil data ke page selanjutnya
 
+                                session.createLoginSession(
+                                        user.getName(),
+                                        user.getEmail(),
+                                        user.getUsername(),
+                                        user.getIdentity_number(),
+                                        user.getAddress(),
+                                        user.getPostcode(),
+                                        user.getPhone_number()
+                                        );
 
-
-
-                            } else {
+                                //TODO pindah Intent
+                                startActivity(afterlogin);
+                                finish();
+                          } else {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
