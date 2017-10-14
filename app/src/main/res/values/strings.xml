@@ -14,4 +14,15 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+
+    //nad
+
+    <string name="tab1">HOME</string>
+    <string name="tab2">HISTORY</string>
+    <string name="tab3">NOTIFICATION</string>
+    <string name="tab4">HELP</string>
+    <string name="tab5">PROFILE</string>
+    <string name="belum">Masih Dalam Pengerjaan</string>
+
+
 </resources>

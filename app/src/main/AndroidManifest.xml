@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".RegisterActivityStep1" />
         <activity android:name=".RegisterActivityStep2" />
-        <activity android:name=".DummyProfileActivity"></activity>
+        <activity android:name=".DummyProfileActivity" />
+        <activity android:name=".KategoriActivity"></activity>
     </application>
 
 </manifest>

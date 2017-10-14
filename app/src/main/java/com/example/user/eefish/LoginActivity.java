@@ -157,7 +157,6 @@ public class LoginActivity extends AppCompatActivity {
                 return params;
             }
         };
-
         AppController.getInstance(this).addToRequestQueue(stringRequest);
     }
 }

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardview_kategori"
+    >
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_air_laut"
+        android:backgroundTint="@color/cardview_light_background"
+        android:background="@color/white"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_kategori1"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                tools:src="@drawable/kategori_air_laut" />
+
+            <TextView
+                android:background="@color/lightGray"
+                android:gravity="center"
+                android:id="@+id/tv_kategori1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                tools:text="Air Laut"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_air_tawar"
+        android:backgroundTint="@color/cardview_light_background"
+        android:background="@color/white"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_kategori2"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                tools:src="@drawable/kategori_air_tawar" />
+
+            <TextView
+                android:background="@color/lightGray"
+                android:gravity="center"
+                android:id="@+id/tv_kategori2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                tools:text="Air Laut"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_udang"
+        android:backgroundTint="@color/cardview_light_background"
+        android:background="@color/white"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_kategori3"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                tools:src="@drawable/kategori_udang" />
+
+            <TextView
+                android:background="@color/lightGray"
+                android:gravity="center"
+                android:id="@+id/tv_kategori3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                tools:text="Air Laut"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

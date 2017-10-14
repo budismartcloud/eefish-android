@@ -23,21 +23,13 @@ public class SessionManager {
     int PRIVATE_MODE = 0;
 
     private static final String PREF_NAME = "UserPref";
-
     private static final String IS_LOGIN = "IsLoggedIn";
-
     public static final String KEY_NAME = "name";
-
     public static final String KEY_EMAIL = "email";
-
     public static final String KEY_USERNAME = "username";
-
     public static final String KEY_ADDRESS = "address";
-
     public static final String KEY_PHONE_NUUMBER = "phone_number";
-
     public static final String KEY_iDENTITY_NUMBER = "identity_number";
-
     public static final String KEY_POSTCODE = "postcode";
 
     // Constructor
@@ -52,7 +44,6 @@ public class SessionManager {
      * */
     public void createLoginSession(String name, String email, String username, String identity_number, String address, String postcode,String phone_number){
         editor.putBoolean(IS_LOGIN, true);
-
         editor.putString(KEY_NAME, name);
         editor.putString(KEY_EMAIL, email);
         editor.putString(KEY_USERNAME, username);
@@ -60,7 +51,6 @@ public class SessionManager {
         editor.putString(KEY_ADDRESS, address);
         editor.putString(KEY_POSTCODE, postcode);
         editor.putString(KEY_PHONE_NUUMBER, phone_number);
-
         // commit changes
         editor.commit();
     }
