@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     CardView laut, tawar, udang;
     Bundle kategoriBundle;
     TabLayout mainTablayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
