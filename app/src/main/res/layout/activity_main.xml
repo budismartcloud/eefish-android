@@ -37,7 +37,7 @@
                 android:layout_height="match_parent"
                 android:icon="@drawable/ic_history"
                 android:text="@string/tab2"
-                android:textAlignment="center" />
+                android:textAlignment="center"/>
 
             <android.support.design.widget.TabItem
 

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_login_screen"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
@@ -11,6 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
+        android:textColorHint="#fff"
+
         >
 
         <EditText
@@ -30,6 +33,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/Layout_Register_nama"
+        android:textColorHint="#fff"
+
         >
 
         <EditText
@@ -48,6 +53,8 @@
         android:layout_below="@+id/Layout_Register_ktp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:textColorHint="#fff"
+
         >
 
         <EditText
@@ -66,6 +73,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/Layout_Register_alamat"
         android:layout_marginTop="10dp"
+        android:textColorHint="#fff"
+
         >
 
         <EditText
@@ -79,13 +88,13 @@
 
     <Button
         android:id="@+id/btn_Register_action"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
         android:text="DONE"
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/Layout_Register_kodepos"
-        android:background="@color/colorAccent"
+        android:background="@drawable/button_register"
         android:textColor="@android:color/white"
         />
 </RelativeLayout>

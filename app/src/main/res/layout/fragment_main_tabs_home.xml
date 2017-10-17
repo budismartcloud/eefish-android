@@ -67,7 +67,7 @@
     </LinearLayout>
     <LinearLayout
         android:background="@color/MediumGray"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:orientation="vertical"
         android:layout_width="110dp"
         android:layout_height="wrap_content">

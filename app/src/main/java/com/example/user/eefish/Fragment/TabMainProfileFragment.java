@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ import java.util.HashMap;
 public class TabMainProfileFragment extends Fragment {
 
     TextView nameTV,usernameTV,emaiilTV,addressTV,identitynumberTV,postcodeTV,phonenumberTV;
+    Button mlogout;
     SessionManager session;
 
     @Override
@@ -27,6 +29,16 @@ public class TabMainProfileFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main_tab_profile, container, false);
         GetAllTextViewfromFragment_tab_profile(rootView);
         SetAllUserBiodataToTextView();
+        mlogout = (Button) rootView.findViewById(R.id.logoutButtonProfile);
+
+        mlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                session.logoutUser();
+
+            }
+        });
+
         return rootView;
         }
 

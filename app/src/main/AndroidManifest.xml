@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/kategori_air_laut"
+        android:icon="@drawable/vertical_light_eefish_logomdpi"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

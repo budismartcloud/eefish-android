@@ -71,7 +71,7 @@ public class KategoriActivity extends AppCompatActivity {
                                     JSONObject objFish = jsonArrayFish.getJSONObject(a);
 
                                     Fish fish = new Fish(
-                                            objFish.getInt("id"),
+                                            objFish.getInt("fish_id"),
                                             objFish.getInt("weight"),
                                             objFish.getInt("variety_id"),
                                             objFish.getInt("quantity"),
@@ -79,12 +79,12 @@ public class KategoriActivity extends AppCompatActivity {
                                             objFish.getString("fish_name"),
                                             objFish.getString("variety_name"),
                                             objFish.getString("singular_price"),
-                                            objFish.getString("colective_price"),
+                                            objFish.getString("collective_price"),
                                             objFish.getString("category_name")
 
                                     );
                                     HashMap<String,String> mapIkan = new HashMap<String,String>();
-                                    mapIkan.put("id",String.valueOf(fish.getId_fish()));
+                                    mapIkan.put("id",String.valueOf(fish.getFish_id()));
                                     mapIkan.put("fish_name",fish.getFish_name());
                                     mapIkan.put("colective_price",fish.getColective_price());
                                     mapIkan.put("singular_price",fish.getSingular_price());

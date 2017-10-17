@@ -5,21 +5,9 @@ package com.example.user.eefish.Model;
  */
 
 public class Fish {
-    private int id_fish,weight,variety_id,quantity, category_id;
+    private int fish_id,weight,variety_id,quantity, category_id;
     private String fish_name,variety_name,singular_price, colective_price, category_name;
 
-    public Fish(int id_fish, int weight, int variety_id, int quantity, int category_id, String fish_name, String variety_name, String singular_price, String colective_price, String category_name) {
-        this.id_fish = id_fish;
-        this.weight = weight;
-        this.variety_id = variety_id;
-        this.quantity = quantity;
-        this.category_id = category_id;
-        this.fish_name = fish_name;
-        this.variety_name = variety_name;
-        this.singular_price = singular_price;
-        this.colective_price = colective_price;
-        this.category_name = category_name;
-    }
 
     public int getCategory_id() {
         return category_id;
@@ -37,16 +25,29 @@ public class Fish {
         this.category_name = category_name;
     }
 
-    public int getId_fish() {
-        return id_fish;
-    }
-
-    public void setId_fish(int id_fish) {
-        this.id_fish = id_fish;
+    public Fish(int fish_id, int weight, int variety_id, int quantity, int category_id, String fish_name, String variety_name, String singular_price, String colective_price, String category_name) {
+        this.fish_id = fish_id;
+        this.weight = weight;
+        this.variety_id = variety_id;
+        this.quantity = quantity;
+        this.category_id = category_id;
+        this.fish_name = fish_name;
+        this.variety_name = variety_name;
+        this.singular_price = singular_price;
+        this.colective_price = colective_price;
+        this.category_name = category_name;
     }
 
     public int getWeight() {
         return weight;
+    }
+
+    public int getFish_id() {
+        return fish_id;
+    }
+
+    public void setFish_id(int fish_id) {
+        this.fish_id = fish_id;
     }
 
     public void setWeight(int weight) {

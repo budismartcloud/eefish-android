@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    android:background="@drawable/background_login_screen">
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="wrap_content"
@@ -11,8 +11,10 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/Layout_Login_username"
         android:layout_marginTop="120dp"
+        android:textColorHint="#fff"
         >
         <EditText
+            android:textColor="@android:color/white"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="Username"
@@ -28,6 +30,7 @@
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/Layout_Login_username"
+        android:textColorHint="#fff"
         >
         <EditText
             android:layout_width="250dp"
@@ -41,24 +44,24 @@
 
     <Button
         android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/btn_Login_action"
         android:layout_marginTop="40dp"
         android:text="Sign In"
         android:layout_below="@+id/Layout_Login_password"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/button_singin"
         />
 
     <Button
         android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Register"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textColor="@android:color/white"
-        android:background="@android:color/holo_green_dark"
+        android:background="@drawable/button_register"
         android:id="@+id/btn_Login_RegisterLink"
         android:layout_below="@+id/btn_Login_action"
         />
