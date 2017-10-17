@@ -1,4 +1,4 @@
-package com.example.user.eefish;
+package com.example.user.eefish.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.eefish.R;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -15,26 +17,25 @@ import java.util.HashMap;
  * Created by Rafif on 14/10/2017.
  */
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+public class ListAdapterIkan extends RecyclerView.Adapter<ListAdapterIkan.ViewHolder> {
 
     Context mContext;
     ArrayList<HashMap<String,String >> mListDataIkan;
-    public ListAdapter(KategoriActivity kategoriActivity, ArrayList<HashMap<String, String>> listDataIkan) {
-        this.mContext = kategoriActivity;
+    public ListAdapterIkan(Context context, ArrayList<HashMap<String, String>> listDataIkan) {
+        this.mContext = context;
         this.mListDataIkan = listDataIkan;
     }
 
     @Override
-    public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ListAdapterIkan.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_ikan,null);
-
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ListAdapter.ViewHolder holder, int position) {
-
-
+    public void onBindViewHolder(ListAdapterIkan.ViewHolder holder, int position) {
+        holder.txtFishName.setText(mListDataIkan.get(position).get("fish_name"));
+        holder.txtFishColectivePrice.setText(mListDataIkan.get(position).get("colective_price"));
     }
 
     @Override
@@ -49,7 +50,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-
             txtFishName = (TextView) itemView.findViewById(R.id.tvTitleIkan);
             txtFishColectivePrice = (TextView) itemView.findViewById(R.id.tvPriceIkan);
             imgFishImage = (ImageView) itemView.findViewById(R.id.ivIkan);

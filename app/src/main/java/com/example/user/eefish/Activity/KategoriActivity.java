@@ -1,21 +1,20 @@
-package com.example.user.eefish;
+package com.example.user.eefish.Activity;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.user.eefish.Adapter.ListAdapterIkan;
 import com.example.user.eefish.Controller.AppConfig;
 import com.example.user.eefish.Controller.AppController;
 import com.example.user.eefish.Model.Fish;
-import com.example.user.eefish.Model.User;
+import com.example.user.eefish.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,7 +22,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class KategoriActivity extends AppCompatActivity {
     static String URL_FISH_BY_KATEGORI_NUM;
@@ -36,6 +34,12 @@ public class KategoriActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kategori);
         listDataIkanFiltered = new ArrayList<HashMap<String,String>>();
+
+        //ambil recycler view dari layout
+        lvIkan = (RecyclerView) findViewById(R.id.lvIkanFilteredKategori);
+        LinearLayoutManager llmIkan = new LinearLayoutManager(this);
+        llmIkan.setOrientation(LinearLayoutManager.VERTICAL);
+        lvIkan.setLayoutManager(llmIkan);
 
         //acceptedBundleKategori = getIntent().getExtras();
         onKategori = getIntent().getExtras().getInt("id");
@@ -60,7 +64,7 @@ public class KategoriActivity extends AppCompatActivity {
 
                             //302 = no error on response data
                             if (obj.getInt("code") == 302) {
-                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
                                 //getting the fish from the response
                               JSONArray jsonArrayFish = obj.getJSONArray("data");
                                 for (int a = 0; a < jsonArrayFish.length();a++){
@@ -84,11 +88,15 @@ public class KategoriActivity extends AppCompatActivity {
                                     mapIkan.put("fish_name",fish.getFish_name());
                                     mapIkan.put("colective_price",fish.getColective_price());
                                     mapIkan.put("singular_price",fish.getSingular_price());
+//                                    mapIkan.put("id",String.valueOf(objFish.getInt("id")));
+//                                    mapIkan.put("fish_name",objFish.getString("fish_name"));
+//                                    mapIkan.put("colective_price",objFish.getString("colective_price"));
+//                                    mapIkan.put("singular_price",objFish.getString("singular_price"));
+
                                     listDataIkanFiltered.add(mapIkan);
                                     // ADAPTERVIEW KE LISTVIEW HINGGA SET ADAPTER
-                                    ListAdapter listAdapterIkan = new ListAdapter(KategoriActivity.this,listDataIkanFiltered );
-                                    lvIkan.setAdapter(listAdapterIkan);
-
+                                    ListAdapterIkan listAdapterIkanIkan = new ListAdapterIkan(KategoriActivity.this,listDataIkanFiltered );
+                                    lvIkan.setAdapter(listAdapterIkanIkan);
                                 }
                             }
                             else {

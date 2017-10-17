@@ -7,11 +7,11 @@ public class User {
     int id;
     String username,name,password,identity_number,address,phone_number,email,postcode;
 
-    public User(int id, String username, String name, String password, String identity_number, String address, String phone_number, String email, String postcode) {
+    public User(int id, String username, String name, String identity_number, String address, String phone_number, String email, String postcode) {
         this.id = id;
         this.username = username;
         this.name = name;
-        this.password = password;
+//        this.password = password;
         this.identity_number = identity_number;
         this.address = address;
         this.phone_number = phone_number;

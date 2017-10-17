@@ -1,11 +1,11 @@
-package com.example.user.eefish;
+package com.example.user.eefish.Activity;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import com.example.user.eefish.Controller.SessionManager;
+import com.example.user.eefish.R;
 
 import java.util.HashMap;
 
@@ -18,7 +18,7 @@ public class DummyProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dummy_profile);
+        setContentView(R.layout.fragment_main_tab_profile);
         GetAllTextViewFromLayout();
 
         session = new SessionManager(getApplicationContext());

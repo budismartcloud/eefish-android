@@ -1,4 +1,4 @@
-package com.example.user.eefish;
+package com.example.user.eefish.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.user.eefish.Controller.AppConfig;
 import com.example.user.eefish.Controller.AppController;
-import com.example.user.eefish.Model.User;
+import com.example.user.eefish.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

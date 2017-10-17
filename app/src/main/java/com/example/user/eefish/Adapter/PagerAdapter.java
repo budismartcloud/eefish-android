@@ -1,8 +1,14 @@
-package com.example.user.eefish;
+package com.example.user.eefish.Adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.example.user.eefish.Fragment.TabMainHelpFragment;
+import com.example.user.eefish.Fragment.TabMainHistoryFragment;
+import com.example.user.eefish.Fragment.TabMainHomeFragment;
+import com.example.user.eefish.Fragment.TabMainNotifikasiFragment;
+import com.example.user.eefish.Fragment.TabMainProfileFragment;
 
 
 /**
@@ -22,17 +28,17 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch(position){
             case 0 :
-                return new Tab1_Home_Fragment();
+                return new TabMainHomeFragment();
             case 1 :
-                return new Tab1_Home_Fragment();
+                return new TabMainHistoryFragment();
             case 2:
-                return new Tab1_Home_Fragment();
+                return new TabMainNotifikasiFragment();
             case 3:
-                return new Tab1_Home_Fragment();
+                return new TabMainHelpFragment();
             case 4:
-                return new Tab1_Home_Fragment();
+                return new TabMainProfileFragment();
             default:
-                return null;
+                return new TabMainHomeFragment();
         }
     }
 

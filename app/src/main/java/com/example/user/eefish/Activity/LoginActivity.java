@@ -1,4 +1,4 @@
-package com.example.user.eefish;
+package com.example.user.eefish.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +17,7 @@ import com.example.user.eefish.Controller.AppConfig;
 import com.example.user.eefish.Controller.AppController;
 import com.example.user.eefish.Controller.SessionManager;
 import com.example.user.eefish.Model.User;
+import com.example.user.eefish.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -105,23 +106,22 @@ public class LoginActivity extends AppCompatActivity {
                             //if no error in response
                             if (obj.getInt("code") == 302) {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
-                                //getting the user from the response
+
                                 JSONObject userJson = obj.getJSONObject("data");
-                                //creating a new user object
+
                                 User user = new User(
                                         userJson.getInt("id"),
                                         userJson.getString("username"),
                                         userJson.getString("name"),
-                                        userJson.getString("password"),
+//                                        userJson.getString("password"),
                                         userJson.getString("identity_number"),
                                         userJson.getString("address"),
                                         userJson.getString("phone_number"),
                                         userJson.getString("email"),
-                                        userJson.getString("postcode")
+                                        userJson.getString("post_code")
                                 );
 
                                 // TODO ambil data ke page selanjutnya
-
                                 session.createLoginSession(
                                         user.getName(),
                                         user.getEmail(),
@@ -133,6 +133,7 @@ public class LoginActivity extends AppCompatActivity {
                                         );
 
                                 //TODO pindah Intent
+                                afterlogin = new Intent(LoginActivity.this,MainActivity.class);
                                 startActivity(afterlogin);
                                 finish();
                           } else {

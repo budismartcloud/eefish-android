@@ -1,4 +1,4 @@
-package com.example.user.eefish;
+package com.example.user.eefish.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.user.eefish.R;
 
 public class RegisterActivityStep1 extends AppCompatActivity {
 

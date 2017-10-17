@@ -4,29 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.eefish.DummyProfileActivity">
+
+    tools:context="com.example.user.eefish.Activity.DummyProfileActivity">
 
     <!--picture-->
+    <FrameLayout
 
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:src="@drawable/shape"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </FrameLayout>
+    <ImageView
+        android:background="@color/MediumGray"
+        android:src="@drawable/kategori_udang"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+    <ScrollView
+        android:background="@color/MediumGray"
+        android:layout_below="@id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@color/lightGray"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <!--username-->
     <TextView
-        android:layout_marginTop="100dp"
+
+        android:background="@color/DarkGray"
+        style="@style/profileshow"
+        android:text="Nama Pengguna"
+        android:hint="Nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/usernameprofile"
         />
-
     <!--name-->
     <TextView
-        android:layout_marginTop="10dp"
+        style="@style/profileshow"
+        android:hint="Nama lengkap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/nameprofile"
         android:layout_below="@id/usernameprofile"
         />
-
     <!--email-->
     <TextView
+        style="@style/profileshow"
+        android:hint="email anda"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,14 +71,18 @@
         />
     <!--identity_number-->
     <TextView
+        style="@style/profileshow"
+        android:hint="Nomor Identitas"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/identitynumber"
-        android:layout_below="@+id/emailprofile"
+        android:layout_below="@id/emailprofile"
         />
     <!--phone_number-->
     <TextView
+        style="@style/profileshow"
+        android:hint="Nomor Telepon"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,6 +92,8 @@
 
     <!--address-->
     <TextView
+        style="@style/profileshow"
+        android:hint="Alamat Saya"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,13 +103,16 @@
 
     <!--post_code-->
     <TextView
+        style="@style/profileshow"
+        android:hint="Kodepos"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/postcodeprofile"
         android:layout_below="@id/addressprofile"
         />
-
+        </RelativeLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

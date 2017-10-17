@@ -6,25 +6,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/kategori_air_laut"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Controller.AppController" />
-        <activity android:name=".Controller.AppConfig" />
-        <activity android:name=".Controller.SessionManager" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.LoginActivity"/>
+        <activity android:name=".Activity.RegisterActivityStep1" />
+        <activity android:name=".Activity.RegisterActivityStep2" />
+        <activity android:name=".Activity.DummyProfileActivity" />
+        <activity android:name=".Activity.KategoriActivity"></activity>
+        <activity android:name=".Activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivityStep1" />
-        <activity android:name=".RegisterActivityStep2" />
-        <activity android:name=".DummyProfileActivity" />
-        <activity android:name=".KategoriActivity"></activity>
+
     </application>
 
 </manifest>
