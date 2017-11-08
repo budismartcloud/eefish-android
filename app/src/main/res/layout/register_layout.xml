@@ -2,122 +2,120 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_login_screen"
+    android:background="@color/colorPrimary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     >
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
-        android:id="@+id/Layout_Register_username"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:textColorHint="#fff"
-
+        android:layout_centerVertical="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/horizontal_white_eefish_logo6mdpi"
+            android:id="@+id/imagelogoeefish"
+            android:layout_marginBottom="20dp"
+            />
+
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Your Username"
         android:textSize="18dp"
         android:id="@+id/edtText_Register_username"
         android:inputType="text"
+        android:padding="10dp"
+        android:background="@drawable/bg_field_text"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/imagelogoeefish"
         />
 
-    </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/Layout_Register_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Layout_Register_username"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:textColorHint="#fff"
-
-        >
 
     <EditText
-        android:layout_width="250dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Email@example"
+        android:layout_below="@id/edtText_Register_username"
         android:id="@+id/edtText_Register_email"
         android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_field_text"
         />
-    </android.support.design.widget.TextInputLayout>
 
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/Layout_Register_telepon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Layout_Register_email"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textColorHint="#fff"
-
-        >
 
         <EditText
-            android:layout_width="250dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edtText_Register_telepon"
             android:hint="Your phone number"
             android:inputType="number"
+            android:layout_below="@id/edtText_Register_email"
+            android:padding="10dp"
+            android:background="@drawable/bg_field_text"
+            android:layout_marginBottom="30dp"
             />
 
-    </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/Layout_Register_pasword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Layout_Register_telepon"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textColorHint="#fff"
-
-        >
         <EditText
-            android:layout_width="250dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="password"
             android:inputType="textPassword"
             android:id="@+id/edtText_Register_password"
+            android:layout_below="@id/edtText_Register_telepon"
+            android:padding="10dp"
+            android:background="@drawable/bg_field_text"
+            android:layout_marginBottom="5dp"
             />
 
-    </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/Layout_Register_Konfirmasipasword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Layout_Register_pasword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textColorHint="#fff"
-
-        >
         <EditText
-            android:layout_width="250dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="Konfirmasi password"
             android:id="@+id/edtText_Register_konfimasiPassword"
             android:inputType="textPassword"
+            android:padding="10dp"
+            android:background="@drawable/bg_field_text"
+            android:layout_below="@id/edtText_Register_password"
+
             />
-    </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:layout_below="@+id/Layout_Register_Konfirmasipasword"
+            android:layout_below="@id/edtText_Register_konfimasiPassword"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:layout_width="140dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="120dp"
             android:layout_height="40dp"
             android:text="Next"
             android:drawableRight="@drawable/ic_arrow_forward"
             android:drawablePadding="-20dp"
-            android:textColor="@android:color/white"
-            android:background="@drawable/button_singin"
+            android:textColor="@color/bg_effish"
+            android:background="@drawable/bg_field_text"
             android:id="@+id/btn_Register_next_act1"
             />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_link_to_login"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/btn_Register_next_act1"
+            android:textColor="@android:color/white"
+            android:id="@+id/btn_Login_LoginLink"
+            android:textSize="15dp"
+            android:background="@null"
+            android:textAllCaps="false"
+            />
+    </RelativeLayout>
+
 </RelativeLayout>

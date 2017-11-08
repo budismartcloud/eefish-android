@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/background_splasscreen"
+    android:padding="10dp"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
     tools:context="com.example.user.eefish.Activity.SplashScreen">
 
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/splash_eefish_logo2xhdpi"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:src="@drawable/horizontal_white_eefish_logo6xhdpi"
+            android:layout_gravity="center"
             />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Smart Choice For Fish'a Holic"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    />
+        </LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.user.eefish.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,18 +28,18 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static final String TAG = "LoginActivity";
     EditText edtTextLoginUsername,edtTextLoginPassword;
     Button btnLogin,btnRegisterLink;
     String username,password;
     Intent afterlogin;
     SessionManager session;
+    ProgressDialog pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
-
-        Intent afterlogin = new Intent(LoginActivity.this, DummyProfileActivity.class);
 
         GetAllEditTextFromLayout();
         GetAllButtonFromLayout();
@@ -90,9 +91,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void doLogin(final String username, final String password) {
-//        pDialog.setMessage("Loading..");
-//        pDialog.show();
-
+        pDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog);
+        pDialog.setMessage("Authenticating..");
+        pDialog.show();
         final StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConfig.URL_LOGIN,
                 new Response.Listener<String>() {
                     @Override
@@ -102,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                             //converting response to json object
                             JSONObject obj = new JSONObject(response);
-
+                            pDialog.setMessage("Loading...");
                             //if no error in response
                             if (obj.getInt("code") == 302) {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
@@ -133,6 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                                         );
 
                                 //TODO pindah Intent
+                                pDialog.dismiss();
                                 afterlogin = new Intent(LoginActivity.this,MainActivity.class);
                                 startActivity(afterlogin);
                                 finish();
@@ -147,7 +149,8 @@ public class LoginActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                        pDialog.dismiss();
+                        Toast.makeText(getApplicationContext(), "Koneksi Gagal", Toast.LENGTH_SHORT).show();
                     }
                 }) {
             @Override

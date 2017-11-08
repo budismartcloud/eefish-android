@@ -35,7 +35,6 @@ public class TabMainProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 session.logoutUser();
-
             }
         });
 

@@ -1,70 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_login_screen">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/colorPrimary">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/Layout_Login_username"
-        android:layout_marginTop="120dp"
-        android:textColorHint="#fff"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
         >
-        <EditText
-            android:textColor="@android:color/white"
-            android:layout_width="250dp"
+
+        <ImageView
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:src="@drawable/horizontal_white_eefish_logo6xhdpi"
+            />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:singleLine="true"
             android:hint="Username"
             android:id="@+id/edtText_Login_Username"
             android:inputType="text"
-            />
-    </android.support.design.widget.TextInputLayout>
-    
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/Layout_Login_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/Layout_Login_username"
-        android:textColorHint="#fff"
-        >
+            android:background="@drawable/bg_field_text"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/input_login_hint"
+            tools:ignore="Deprecated" />
+
         <EditText
-            android:layout_width="250dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@drawable/bg_field_text"
             android:id="@+id/edtText_Login_password"
             android:hint="Password"
+            android:singleLine="true"
             android:inputType="textPassword"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/input_login_hint"
             />
         
-    </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:layout_width="160dp"
-        android:layout_height="40dp"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
         android:id="@+id/btn_Login_action"
-        android:layout_marginTop="40dp"
-        android:text="Sign In"
-        android:layout_below="@+id/Layout_Login_password"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/white"
+        android:layout_marginTop="20dip"
+        android:text="@string/btn_login"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
         android:background="@drawable/button_singin"
         />
 
     <Button
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:text="Register"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_link_to_register"
+        android:layout_marginTop="20dp"
         android:textColor="@android:color/white"
-        android:background="@drawable/button_register"
         android:id="@+id/btn_Login_RegisterLink"
-        android:layout_below="@+id/btn_Login_action"
+        android:textSize="15dp"
+        android:background="@null"
+        android:textAllCaps="false"
         />
 
+    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

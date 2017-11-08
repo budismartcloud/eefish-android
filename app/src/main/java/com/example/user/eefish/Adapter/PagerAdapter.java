@@ -32,10 +32,8 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             case 1 :
                 return new TabMainHistoryFragment();
             case 2:
-                return new TabMainNotifikasiFragment();
-            case 3:
                 return new TabMainHelpFragment();
-            case 4:
+            case 3:
                 return new TabMainProfileFragment();
             default:
                 return new TabMainHomeFragment();

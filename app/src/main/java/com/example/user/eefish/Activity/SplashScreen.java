@@ -9,23 +9,30 @@ import com.example.user.eefish.R;
 
 public class SplashScreen extends AppCompatActivity {
     SessionManager session;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
         session = new SessionManager(getApplicationContext());
-        session.checkLogin();
 
         Thread myThread = new Thread(){
             @Override
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(intent);
-                    finish();
+
+                    if (session.checkLogin()){
+                        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/layer"/>
+        <ImageButton
+            android:background="#00000000"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tvNamaIkan"
+            android:padding="10dp"
+            android:foregroundTint="#ffffff"
+            android:textSize="36dp"
+            android:text="Bandeng Jumbo"
+            android:textColor="#ffffff"
+            android:layout_gravity="bottom"
+            android:gravity="end|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+    </FrameLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/tabPerkilo"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@color/MediumGray"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:gravity="start|center"
+                    android:text="Order Per Kilogram"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+                <LinearLayout
+                    android:background="@color/MediumGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"></LinearLayout>
+                <TextView
+                    android:id="@+id/tvHargaIkanPerKilo"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="18dp"
+                    android:text="Rp. 42.000,00/Kg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/bMinusItemPerKilo"
+                        android:backgroundTint="@color/MediumGray"
+                        android:layout_margin="16dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30dp"
+                        android:gravity="center"
+                        android:text="-"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp" />
+                    <EditText
+                        android:id="@+id/etTotalBeliPerKilo"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="55dp" />
+                    <Button
+                        android:id="@+id/bPlusItemPerKilo"
+                        android:backgroundTint="@color/colorAccent"
+                        android:layout_margin="16dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="30dp"
+                        android:gravity="center"
+                        android:text="+"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <Space
+                android:id="@+id/spaceUnderTabPerkilo"
+                android:layout_below="@id/tabPerkilo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <LinearLayout
+                android:id="@+id/TabPerEkor"
+                android:layout_below="@id/spaceUnderTabPerkilo"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@color/MediumGray"
+                    android:paddingLeft="20dp"
+                    android:textSize="20dp"
+                    android:gravity="start|center"
+                    android:text="Order Per Ekor"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+                <LinearLayout
+                    android:background="@color/MediumGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"></LinearLayout>
+                <TextView
+                    android:id="@+id/tvHargaIkanPerEkor"
+                    android:padding="10dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="18dp"
+                    android:text="Rp. 18.000,00/Ekor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/bMinusItemPerEkor"
+                        android:backgroundTint="@color/MediumGray"
+                        android:layout_margin="16dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="30dp"
+                        android:gravity="center"
+                        android:text="-"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp" />
+                    <EditText
+                        android:id="@+id/etTotalBeliPerEkor"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_height="55dp" />
+                    <Button
+                        android:id="@+id/bPlusItemPerEkor"
+                        android:backgroundTint="@color/colorAccent"
+                        android:layout_margin="16dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="30dp"
+                        android:gravity="center"
+                        android:text="+"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

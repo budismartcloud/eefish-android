@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.user.eefish.R;
@@ -47,13 +48,16 @@ public class ListAdapterIkan extends RecyclerView.Adapter<ListAdapterIkan.ViewHo
     {
         TextView txtFishName, txtFishColectivePrice;
         ImageView imgFishImage;
-
+        LinearLayout ikanLayout;
         public ViewHolder(View itemView) {
             super(itemView);
             txtFishName = (TextView) itemView.findViewById(R.id.tvTitleIkan);
             txtFishColectivePrice = (TextView) itemView.findViewById(R.id.tvPriceIkan);
             imgFishImage = (ImageView) itemView.findViewById(R.id.ivIkan);
+            ikanLayout = (LinearLayout) itemView.findViewById(R.id.layoutikanbykategori);
         }
+
+
 
     }
 }

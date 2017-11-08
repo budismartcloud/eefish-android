@@ -1,5 +1,6 @@
 package com.example.user.eefish.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,12 +30,15 @@ public class KategoriActivity extends AppCompatActivity {
     int onKategori;
     ArrayList<HashMap<String,String>> listDataIkanFiltered;
     RecyclerView lvIkan;
+    Intent nextintent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kategori);
         listDataIkanFiltered = new ArrayList<HashMap<String,String>>();
 
+        nextintent = new Intent(this,DetilIkanActivity.class);
         //ambil recycler view dari layout
         lvIkan = (RecyclerView) findViewById(R.id.lvIkanFilteredKategori);
         LinearLayoutManager llmIkan = new LinearLayoutManager(this);

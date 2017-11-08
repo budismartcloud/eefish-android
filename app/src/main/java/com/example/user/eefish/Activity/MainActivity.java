@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         session = new SessionManager(getApplicationContext());
-        session.checkLogin();
 
         mainTablayout = (TabLayout) findViewById(R.id.tablayout);
         final ViewPager mainTabPager = (ViewPager) findViewById(R.id.pager);

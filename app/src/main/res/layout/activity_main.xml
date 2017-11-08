@@ -4,6 +4,52 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbaricon"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_message"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                />
+
+
+            <ImageView
+                android:id="@+id/logo_effish_main_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/horizontal_white_eefish_logo_6ldpi" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_shopping_cart"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:padding="5dp"
+
+                />
+
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
     <android.support.design.widget.AppBarLayout
 
         android:id="@+id/appbar"
@@ -14,49 +60,50 @@
 
             android:id="@+id/tablayout"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:accessibilityLiveRegion="none"
 
             android:clickable="true"
             app:tabBackground="@color/colorPrimary"
             app:tabIndicatorColor="@color/colorAccent"
-            app:tabIndicatorHeight="7dp"
-            app:tabSelectedTextColor="#ffffff"
-            app:tabTextColor="#f4fdff">
+            app:tabIndicatorHeight="4dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="#f4fdff"
+            >
 
             <android.support.design.widget.TabItem
 
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:icon="@drawable/ic_home"
-                android:text="@string/tab1"
+                android:text="Home"
                 android:textAlignment="center" />
 
             <android.support.design.widget.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:icon="@drawable/ic_history"
                 android:text="@string/tab2"
-                android:textAlignment="center"/>
+                 android:textAlignment="center"/>
 
-            <android.support.design.widget.TabItem
+            <!--<android.support.design.widget.TabItem-->
 
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:accessibilityLiveRegion="none"
-                android:icon="@drawable/ic_notifikasi"
-                android:text="@string/tab3"
-                />
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:accessibilityLiveRegion="none"-->
+                <!--android:icon="@drawable/ic_message"-->
+                <!--android:text="@string/tab3"-->
+                <!--/>-->
             <android.support.design.widget.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:icon="@drawable/ic_help"
                 android:text="@string/tab4" />
 
             <android.support.design.widget.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:icon="@drawable/ic_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_account"
                 android:text="@string/tab5" />
 
         </android.support.design.widget.TabLayout>
