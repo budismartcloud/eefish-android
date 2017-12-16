@@ -26,7 +26,6 @@ import java.util.HashMap;
 
 public class KategoriActivity extends AppCompatActivity {
     static String URL_FISH_BY_KATEGORI_NUM;
-    Bundle acceptedBundleKategori;
     int onKategori;
     ArrayList<HashMap<String,String>> listDataIkanFiltered;
     RecyclerView lvIkan;
@@ -76,27 +75,24 @@ public class KategoriActivity extends AppCompatActivity {
 
                                     Fish fish = new Fish(
                                             objFish.getInt("fish_id"),
-                                            objFish.getInt("weight"),
+                                            objFish.getString("weight"),
                                             objFish.getInt("variety_id"),
-                                            objFish.getInt("quantity"),
-                                            objFish.getInt("category_id"),
+                                            objFish.getString("quantity"),
+                                            objFish.getString("category_id"),
                                             objFish.getString("fish_name"),
                                             objFish.getString("variety_name"),
                                             objFish.getString("singular_price"),
                                             objFish.getString("collective_price"),
-                                            objFish.getString("category_name")
-
+                                            objFish.getString("category_name"),
+                                            objFish.getString("picture")
                                     );
                                     HashMap<String,String> mapIkan = new HashMap<String,String>();
                                     mapIkan.put("id",String.valueOf(fish.getFish_id()));
                                     mapIkan.put("fish_name",fish.getFish_name());
                                     mapIkan.put("colective_price",fish.getColective_price());
                                     mapIkan.put("singular_price",fish.getSingular_price());
-//                                    mapIkan.put("id",String.valueOf(objFish.getInt("id")));
-//                                    mapIkan.put("fish_name",objFish.getString("fish_name"));
-//                                    mapIkan.put("colective_price",objFish.getString("colective_price"));
-//                                    mapIkan.put("singular_price",objFish.getString("singular_price"));
-
+                                    mapIkan.put("picture",fish.getPicture_fish());
+//
                                     listDataIkanFiltered.add(mapIkan);
                                     // ADAPTERVIEW KE LISTVIEW HINGGA SET ADAPTER
                                     ListAdapterIkan listAdapterIkanIkan = new ListAdapterIkan(KategoriActivity.this,listDataIkanFiltered );

@@ -5,16 +5,28 @@ package com.example.user.eefish.Model;
  */
 
 public class Fish {
-    private int fish_id,weight,variety_id,quantity, category_id;
-    private String fish_name,variety_name,singular_price, colective_price, category_name;
+    private int fish_id,variety_id;
+    private String fish_name;
+    private String quantity;
+    private String category_id;
+    private String weight;
+    private String variety_name;
+    private String singular_price;
+    private String colective_price;
+    private String category_name;
 
-
-    public int getCategory_id() {
-        return category_id;
+    public String getPicture_fish() {
+        return picture_fish;
     }
 
-    public void setCategory_id(int category_id) {
-        this.category_id = category_id;
+    public void setPicture_fish(String picture_fish) {
+        this.picture_fish = picture_fish;
+    }
+
+    private String picture_fish;
+
+    public String getCategory_id() {
+        return category_id;
     }
 
     public String getCategory_name() {
@@ -25,7 +37,27 @@ public class Fish {
         this.category_name = category_name;
     }
 
-    public Fish(int fish_id, int weight, int variety_id, int quantity, int category_id, String fish_name, String variety_name, String singular_price, String colective_price, String category_name) {
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setCategory_id(String category_id) {
+        this.category_id = category_id;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public Fish(int fish_id, String weight, int variety_id, String quantity, String category_id, String fish_name, String variety_name, String singular_price, String colective_price, String category_name, String picture_fish) {
         this.fish_id = fish_id;
         this.weight = weight;
         this.variety_id = variety_id;
@@ -36,11 +68,9 @@ public class Fish {
         this.singular_price = singular_price;
         this.colective_price = colective_price;
         this.category_name = category_name;
+        this.picture_fish = picture_fish;
     }
 
-    public int getWeight() {
-        return weight;
-    }
 
     public int getFish_id() {
         return fish_id;
@@ -50,9 +80,6 @@ public class Fish {
         this.fish_id = fish_id;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
 
     public int getVariety_id() {
         return variety_id;
@@ -62,13 +89,6 @@ public class Fish {
         this.variety_id = variety_id;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 
     public String getFish_name() {
         return fish_name;

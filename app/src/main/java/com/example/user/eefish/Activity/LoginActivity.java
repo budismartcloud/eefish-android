@@ -130,7 +130,8 @@ public class LoginActivity extends AppCompatActivity {
                                         user.getIdentity_number(),
                                         user.getAddress(),
                                         user.getPostcode(),
-                                        user.getPhone_number()
+                                        user.getPhone_number(),
+                                        user.getId()
                                         );
 
                                 //TODO pindah Intent

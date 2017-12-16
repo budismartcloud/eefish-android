@@ -99,7 +99,7 @@
             android:text="Next"
             android:drawableRight="@drawable/ic_arrow_forward"
             android:drawablePadding="-20dp"
-            android:textColor="@color/bg_effish"
+            android:textColor="@color/colorPrimary"
             android:background="@drawable/bg_field_text"
             android:id="@+id/btn_Register_next_act1"
             />

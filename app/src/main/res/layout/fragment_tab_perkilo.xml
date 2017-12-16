@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+
+                android:layout_below="@id/layout_jenis_pembelian"
+                android:background="@drawable/rounded_shape_whitefull"
+
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:id="@+id/layout_deskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/label_ukuran"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Ukuran : "
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_ukuran_ikan"
+                    android:layout_toEndOf="@id/label_ukuran"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:text="> 500 gr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/label_ukuran" />
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/label_deskripsi"
+                    android:layout_below="@id/tv_ukuran_ikan"
+                    android:background="@drawable/rounded_shape_label_primary"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:text="Deskripsi"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp" />
+                />
+                <TextView
+                    android:id="@+id/tv_deskripsi"
+                    android:layout_below="@id/label_deskripsi"
+                    android:paddingTop="25dp"
+                    android:paddingBottom="25dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Bandeng ukuran jumbo pilihan terbaik yang cocok dimasak untuk kebutuhan harian ataupun kebutuhan acara."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </ScrollView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2px">
+            <LinearLayout
+                android:background="@color/colorAccent2"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:gravity="center|bottom|end"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Harga"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tvHargaIkanTerpilih"
+                    android:gravity="center|center_horizontal|end"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="18dp"
+                    android:text="Rp. 24.0000,0"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/but_detail_addcart"
+                android:background="@color/colorAccent"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Add to Cart" >
+            </Button>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

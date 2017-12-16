@@ -73,29 +73,18 @@
             android:background="@drawable/bg_field_text"
             android:layout_below="@id/edtText_Register_alamat"
             />
-        <Button
-            android:id="@+id/btn_Register_back"
-            android:layout_width="130dp"
-            android:layout_height="40dp"
-            android:text="back"
-            android:layout_marginTop="40dp"
-            android:layout_below="@id/edtText_Register_poskode"
-            android:background="@color/colorPrimaryDark"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="20dp"
-            />
 
     <Button
         android:id="@+id/btn_Register_action"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:text="done"
-        android:layout_toRightOf="@id/btn_Register_back"
+        android:text="Register"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
         android:layout_below="@id/edtText_Register_poskode"
         android:background="@drawable/button_register"
         android:textColor="@android:color/white"
+       android:layout_centerHorizontal="true"
         />
 
         </RelativeLayout>

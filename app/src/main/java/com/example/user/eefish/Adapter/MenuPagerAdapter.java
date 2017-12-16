@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.example.user.eefish.Fragment.TabMainHelpFragment;
 import com.example.user.eefish.Fragment.TabMainHistoryFragment;
 import com.example.user.eefish.Fragment.TabMainHomeFragment;
-import com.example.user.eefish.Fragment.TabMainNotifikasiFragment;
 import com.example.user.eefish.Fragment.TabMainProfileFragment;
 
 
@@ -15,11 +14,11 @@ import com.example.user.eefish.Fragment.TabMainProfileFragment;
  * Created by Nadian on 9/26/2017.
  */
 
-public class PagerAdapter extends FragmentStatePagerAdapter {
+public class MenuPagerAdapter extends FragmentStatePagerAdapter {
     int mNumbOfTab;
 
 
-    public PagerAdapter(FragmentManager fm, int mNumbOfTab) {
+    public MenuPagerAdapter(FragmentManager fm, int mNumbOfTab) {
         super(fm);
         this.mNumbOfTab = mNumbOfTab;
     }

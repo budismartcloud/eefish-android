@@ -15,15 +15,14 @@ import java.util.HashMap;
 public class SessionManager {
     // Shared Preferences
     SharedPreferences pref;
-
     Editor editor;
-
     Context _context;
-
     int PRIVATE_MODE = 0;
 
     private static final String PREF_NAME = "UserPref";
     private static final String IS_LOGIN = "IsLoggedIn";
+    private static final String IS_CART = "IsCart";
+    private static final String KEY_ID = "id";
     public static final String KEY_NAME = "name";
     public static final String KEY_EMAIL = "email";
     public static final String KEY_USERNAME = "username";
@@ -42,7 +41,15 @@ public class SessionManager {
     /**
      * Create login session
      * */
-    public void createLoginSession(String name, String email, String username, String identity_number, String address, String postcode,String phone_number){
+    public void createLoginSession(String name,
+                                   String email,
+                                   String username,
+                                   String identity_number,
+                                   String address,
+                                   String postcode,
+                                   String phone_number,
+                                   int id
+                                   ){
         editor.putBoolean(IS_LOGIN, true);
         editor.putString(KEY_NAME, name);
         editor.putString(KEY_EMAIL, email);
@@ -51,8 +58,17 @@ public class SessionManager {
         editor.putString(KEY_ADDRESS, address);
         editor.putString(KEY_POSTCODE, postcode);
         editor.putString(KEY_PHONE_NUUMBER, phone_number);
+        editor.putInt(KEY_ID,id);
         // commit changes
         editor.commit();
+    }
+
+    public void createCartIn(){
+        editor.putBoolean(IS_CART, true);
+    }
+
+    public int getIdUser(){
+        return pref.getInt(KEY_ID,0);
     }
 
     /**
@@ -76,7 +92,12 @@ public class SessionManager {
     return true;
     }
 
-
+    public Boolean checkCart(){
+        if (!this.isCartIn()){
+            return false;
+        }
+        return true;
+    }
 
     /**
      * Get stored session data
@@ -94,6 +115,11 @@ public class SessionManager {
 
         // return user
         return user;
+    }
+
+    public Boolean isCartIn()
+    {
+        return pref.getBoolean(IS_CART,false);
     }
 
     /**
@@ -120,7 +146,8 @@ public class SessionManager {
      * Quick check for login
      * **/
     // Get Login State
-    public boolean isLoggedIn(){
+    public boolean isLoggedIn()
+    {
         return pref.getBoolean(IS_LOGIN, false);
     }
 }

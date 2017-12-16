@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.eefish.Activity.Profile_Editing_Activity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:background="@color/DarkGray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:paddingTop="0dp"
+                android:paddingBottom="20dp"
+                android:layout_margin="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:paddingTop="0dp"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <FrameLayout
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+
+                            android:layout_gravity="center|bottom"
+                            android:background="@drawable/ic_edit_accent"
+                            android:layout_marginBottom="15dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+                        <android.support.v7.widget.AppCompatImageView
+                            android:elevation="1dp"
+                            android:src="@drawable/layer"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"/>
+                        <android.support.v7.widget.AppCompatImageView
+
+                            android:tintMode="screen"
+                            android:background="@drawable/rounded_shape_white"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/profile_pic"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp" />
+                    </FrameLayout>
+                </LinearLayout>
+                <!--username-->
+                <LinearLayout
+                    style="@style/profileitem"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/rounded_shape_whitefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="12">
+                    <ImageView
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_profile_name"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text=":"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etProfile_Username"
+                        android:inputType="text"
+                        android:layout_weight="9"
+                        android:paddingLeft="10dp"
+                        android:gravity="left|center_vertical"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:text="Nadian123"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true" />
+                </LinearLayout>
+                <!--username-->
+                <LinearLayout
+                    style="@style/profileitem"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/rounded_shape_whitefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="12">
+                    <ImageView
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_person"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text=":"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etProfile_Name"
+                        android:inputType="text"
+                        android:layout_weight="9"
+                        android:paddingLeft="10dp"
+                        android:gravity="left|center_vertical"
+
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:text="Nadia Ningtias"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true" />
+                </LinearLayout>
+                <!--Nomor Identitas-->
+                <LinearLayout
+                    style="@style/profileitem"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/rounded_shape_whitefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="12">
+                    <ImageView
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_fingerprint"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text=":"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etProfile_nik"
+                        android:inputType="number"
+                        android:layout_weight="9"
+                        android:paddingLeft="10dp"
+                        android:gravity="left|center_vertical"
+                        android:textSize="14dp"
+                        android:text="356738272837"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true" />
+                </LinearLayout>
+                <!--Nomor Ponsel-->
+                <LinearLayout
+                    style="@style/profileitem"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/rounded_shape_whitefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="12">
+                    <ImageView
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:padding="5dp"
+
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_phone_android"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text=":"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <EditText
+                        android:id="@+id/etProfile_phone_number"
+                        android:inputType="number"
+                        android:layout_weight="9"
+                        android:paddingLeft="10dp"
+                        android:gravity="left|center_vertical"
+                        android:textSize="14dp"
+                        android:text="085766826282"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true" />
+                </LinearLayout>
+
+                <!--alamat-->
+                <LinearLayout
+                    style="@style/profileitem"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/rounded_shape_whitefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="12">
+                    <ImageView
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_my_location"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text=":"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etProfile_address"
+                        android:inputType="textMultiLine"
+                        android:layout_gravity="start"
+                        android:layout_weight="9"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:gravity="left"
+                        android:textSize="14dp"
+                        android:text="RT 22 RW 06, Sungon Suko
+Sidoarjo, Jawa Timur"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true" />
+                </LinearLayout>
+                <!--Postcode-->
+                <LinearLayout
+                    style="@style/profileitem"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/rounded_shape_whitefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="12">
+                    <ImageView
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:padding="5dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_markunread_mailbox"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text=":"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etProfile_postcode"
+                        android:inputType="textPostalAddress"
+                        android:layout_weight="9"
+                        android:paddingLeft="10dp"
+                        android:gravity="left|center_vertical"
+                        android:textSize="14dp"
+                        android:text="61224"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true" />
+                </LinearLayout>
+                <!--email-->
+                <LinearLayout
+                    style="@style/profileitem"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/rounded_shape_whitefull"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="12">
+                    <ImageView
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_email_primary"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text=":"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp" />
+                    <TextView
+                        android:id="@+id/etProfile_email"
+                        android:inputType="textEmailAddress"
+                        android:layout_gravity="start"
+                        android:layout_weight="8"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:gravity="left"
+                        android:textSize="14dp"
+                        android:text="nadianingtias97@gmail.com"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!--Button update profile-->
+        <Button
+            android:elevation="5dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:clickable="true"
+            android:id="@+id/but_profile_update"
+            android:text="UPDATE"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+    </FrameLayout>
+
+</LinearLayout>

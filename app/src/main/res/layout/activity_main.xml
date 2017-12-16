@@ -34,9 +34,31 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:src="@drawable/horizontal_white_eefish_logo_6ldpi" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:visibility="invisible"
+                >
 
+            <TextView
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="2"
+                android:id="@+id/logo_notif"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_accent"/>
+
+            </FrameLayout>
 
             <ImageView
+                android:id="@+id/but_Cart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -76,35 +98,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_home"
-                android:text="Home"
                 android:textAlignment="center" />
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_history"
-                android:text="@string/tab2"
-                 android:textAlignment="center"/>
+                android:textAlignment="center"/>
 
             <!--<android.support.design.widget.TabItem-->
 
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:accessibilityLiveRegion="none"-->
-                <!--android:icon="@drawable/ic_message"-->
-                <!--android:text="@string/tab3"-->
-                <!--/>-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:accessibilityLiveRegion="none"-->
+            <!--android:icon="@drawable/ic_message"-->
+            <!--android:text="@string/tab3"-->
+            <!--/>-->
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_help"
-                android:text="@string/tab4" />
+                />
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_account"
-                android:text="@string/tab5" />
+                />
 
         </android.support.design.widget.TabLayout>
 

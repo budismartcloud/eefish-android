@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:foreground="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/bg_data_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:background="@drawable/rounded_shape_white"
+            android:padding="10dp"
+            android:layout_marginLeft="32dp"
+            android:layout_gravity="center|left"
+            android:src="@drawable/profile_pic"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvProfile_NamaLengkap"
+                android:paddingTop="36dp"
+                android:paddingLeft="16dp"
+                android:foregroundTint="#ffffff"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:text="Nadia Ningtias"
+                android:textColor="@color/White"
+                android:layout_gravity="start"
+                android:gravity="left|bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvprofile_NoHP_atas"
+                android:paddingTop="3dp"
+                android:paddingLeft="16dp"
+                android:foregroundTint="#ffffff"
+                android:textSize="14dp"
+                android:text="085784357054"
+                android:textColor="@color/White"
+                android:layout_gravity="start"
+                android:gravity="left|bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvProfile_Saldo"
+                android:paddingTop="3dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="3dp"
+                android:foregroundTint="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Rp 100.000,00"
+                android:textColor="@color/White"
+                android:layout_gravity="start"
+                android:gravity="left|bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:clickable="true"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/button_singin"
+                android:text="Edit"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+    <ScrollView
+        android:background="@color/MediumGray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:paddingTop="0dp"
+            android:paddingBottom="20dp"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--username-->
+            <LinearLayout
+                style="@style/profileitem"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/rounded_shape_whitefull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="12">
+                <ImageView
+                    android:layout_weight="2"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_profile_name"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text=":"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tvProfile_Username"
+                    android:layout_weight="9"
+                    android:paddingLeft="10dp"
+                    android:gravity="left|center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp"
+                    android:text="Nadian123"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true" />
+            </LinearLayout>
+            <!--Nomor Identitas-->
+            <LinearLayout
+                style="@style/profileitem"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/rounded_shape_whitefull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="12">
+                <ImageView
+                    android:layout_weight="2"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_fingerprint"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text=":"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tvProfile_nik"
+                    android:layout_weight="9"
+                    android:paddingLeft="10dp"
+                    android:gravity="left|center_vertical"
+                    android:textSize="14dp"
+                    android:text="356738272837"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true" />
+            </LinearLayout>
+            <!--Nomor Ponsel-->
+            <LinearLayout
+                style="@style/profileitem"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/rounded_shape_whitefull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="12">
+                <ImageView
+                    android:layout_weight="2"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_phone_android"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text=":"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tvProfile_phone_number"
+                    android:layout_weight="9"
+                    android:paddingLeft="10dp"
+                    android:gravity="left|center_vertical"
+                    android:textSize="14dp"
+                    android:text="085766826282"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true" />
+            </LinearLayout>
+
+            <!--alamat-->
+            <LinearLayout
+                style="@style/profileitem"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/rounded_shape_whitefull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="12">
+                <ImageView
+                    android:layout_weight="2"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_my_location"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text=":"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_gravity="start"
+                    android:id="@+id/tvProfile_address"
+                    android:layout_weight="9"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="left"
+                    android:textSize="14dp"
+                    android:text="RT 22 RW 06, Sungon Suko
+Sidoarjo, Jawa Timur"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true" />
+            </LinearLayout>
+            <!--Postcode-->
+            <LinearLayout
+                style="@style/profileitem"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/rounded_shape_whitefull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="12">
+                <ImageView
+                    android:layout_weight="2"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_markunread_mailbox"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text=":"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tvProfile_postcode"
+                    android:layout_weight="9"
+                    android:paddingLeft="10dp"
+                    android:gravity="left|center_vertical"
+                    android:textSize="14dp"
+                    android:text="61224"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true" />
+            </LinearLayout>
+            <!--email-->
+            <LinearLayout
+                style="@style/profileitem"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/rounded_shape_whitefull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="12">
+                <ImageView
+                    android:layout_weight="2"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_email_primary"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text=":"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:layout_gravity="start"
+                    android:id="@+id/tvProfile_email"
+                    android:layout_weight="8"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="left"
+                    android:textSize="14dp"
+                    android:text="nadianingtias97@gmail.com"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/but_profile_logout"
+                android:text="logout"
+                android:layout_gravity="end"
+                android:background="@drawable/rounded_shape_whitefull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

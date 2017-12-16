@@ -23,7 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.DetilIkanActivity"></activity>
+        <activity android:name=".Activity.DetilIkanActivity" />
+        <activity android:name=".Activity.CartActivity" />
+        <activity android:name=".Activity.Profile_Editing_Activity"></activity>
     </application>
 
 </manifest>

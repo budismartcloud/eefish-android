@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <ImageView
+        android:id="@+id/ImageIkanView"
+        android:src="@drawable/pic"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/layer"/>
+    <ImageButton
+        android:id="@+id/but_back"
+        android:background="@null"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/tvNamaIkan"
+        android:padding="10dp"
+        android:foregroundTint="#ffffff"
+        android:textSize="36dp"
+        android:text="Bandeng Jumbo"
+        android:textColor="#ffffff"
+        android:layout_gravity="bottom"
+        android:gravity="end|bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+</FrameLayout>
+    <!--<Space-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="15dp" />-->
+        <RelativeLayout
+            android:background="@drawable/rounded_shape_white"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout_Detail_jenispembelian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:accessibilityLiveRegion="none"
+                android:clickable="true"
+                app:tabBackground="@color/colorPrimary"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabIndicatorHeight="7dp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="#f4fdff"
+                >
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perkilo"
+                    android:textAlignment="center"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perekor" />
+            </android.support.design.widget.TabLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager_detail_ikan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </RelativeLayout>
+</LinearLayout>

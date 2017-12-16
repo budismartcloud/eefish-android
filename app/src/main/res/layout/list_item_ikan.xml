@@ -2,42 +2,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="10dp">
+
     <android.support.v7.widget.CardView
+        app:cardElevation="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_field_text"
+        >
         <LinearLayout
             android:id="@+id/layoutikanbykategori"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
-                android:id="@+id/ivIkan"
+                android:src="@drawable/packaging_objek"
+                android:id="@+id/ivIkan1"
                 android:layout_gravity="center"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_menu_camera"/>
+                android:scaleType="centerCrop"
+                android:background="@android:color/black"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/white"
+                >
+
             <TextView
-                android:id="@+id/tvTitleIkan"
-                android:background="@color/MediumGray"
-                android:padding="5dp"
-                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/tvTitleIkan1"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:text="Title Ikan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
-                android:id="@+id/tvPriceIkan"
+                android:id="@+id/tvPriceIkan1"
                 android:paddingBottom="10dp"
-                android:background="@color/lightGray"
-                android:padding="5dp"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="italic"
+                android:padding="10dp"
+                android:textColor="@android:color/holo_red_dark"
                 android:textSize="14dp"
                 android:text="Harga ikan"
+                android:layout_below="@id/tvTitleIkan1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+            </RelativeLayout>
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
