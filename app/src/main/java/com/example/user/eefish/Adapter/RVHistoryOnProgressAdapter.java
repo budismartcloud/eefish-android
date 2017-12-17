@@ -24,7 +24,7 @@ public class RVHistoryOnProgressAdapter extends RecyclerView.Adapter<RVHistoryOn
     private Bundle mBundle;
 
     public RVHistoryOnProgressAdapter(Context mContext, ArrayList<HashMap<String, String>> mListDataHistoryOnprogress) {
-        this.mContext = mContext;
+            this.mContext = mContext;
         this.mListDataHistoryOnprogress = mListDataHistoryOnprogress;
     }
 
