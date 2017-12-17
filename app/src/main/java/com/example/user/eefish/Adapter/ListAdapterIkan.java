@@ -52,6 +52,7 @@ public class ListAdapterIkan extends RecyclerView.Adapter<ListAdapterIkan.ViewHo
                 .load(ROOT_URL + mListDataIkan.get(position).get("picture"))
                 .crossFade().placeholder(R.drawable.kategori_udang)
                 .into(holder.imgFishImage);
+
         holder.txtFishName.setText(mListDataIkan.get(position).get("fish_name"));
         holder.txtFishColectivePrice.setText("Rp."+mListDataIkan.get(position).get("colective_price"));
         holder.setId(Integer.parseInt(mListDataIkan.get(position).get("id")));
